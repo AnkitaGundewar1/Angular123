@@ -1,0 +1,38 @@
+<div class="content">
+  <i>
+    <h6 class="animate-charcter">
+      Welcome to Online Cooking Recipe Portal, A taste you'll remember!
+    </h6>
+  </i>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div
+      class="col-md-12 bg-warning p-2"
+      style="display: flex; justify-content: flex-end"
+    >
+      <a routerLink="login" *ngIf="!status.logged" class="btn btn-md btn-danger"
+        >Sign In</a
+      >
+      &nbsp;&nbsp;&nbsp;
+      <a
+        routerLink="registration"
+        *ngIf="!status.logged"
+        class="btn btn-md btn-success"
+        >Sign Up</a
+      >
+      &nbsp;&nbsp;
+      <a routerLink="logout" *ngIf="status.logged" class="btn btn-md btn-dark"
+        >Logout</a
+      >
+      &nbsp;&nbsp;
+      <a *ngIf="status.logged">{{ username }}</a>
+    </div>
+  </div>
+  <br />
+
+  <div class="row bg-light">
+    <router-outlet></router-outlet>
+  </div>
+</div>

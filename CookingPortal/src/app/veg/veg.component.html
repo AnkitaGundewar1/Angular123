@@ -1,0 +1,59 @@
+<nav class="navbar navbar-light bg-info">
+  <div class="container-fluid">
+    <a [routerLink]="['/recipes']" class="btn btn-md btn-danger">Back</a>
+    <br /><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="wrapper two">
+      <div class="neon">
+        <h2>List of Veg Recipes</h2>
+      </div>
+    </div>
+
+    <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger"> Add Recipe </button> -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input
+      type="button"
+      value="Add Recipe"
+      (click)="addRecipe()"
+      class="btn btn-md btn-success"
+    />
+    &nbsp;&nbsp;
+  </div>
+</nav>
+<br />
+
+<table class="veg" border="5">
+  <thead>
+    <tr>
+      <th scope="col">Recipe_Id</th>
+      <th scope="col">Recipe_Name</th>
+      <th scope="col">Recipe_Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let rec of vegList">
+      <td>{{ rec.recipe_Id }}</td>
+      <td>{{ rec.recipe_Name }}</td>
+      <td>{{ rec.recipe_Price }}</td>
+      <td>
+        <input
+          type="button"
+          value="Delete"
+          (click)="deleteRecipe(rec.recipe_Id)"
+          class="btn btn-sm btn-danger"
+        />
+      </td>
+      <td>
+        <input
+          type="button"
+          value="Update"
+          (click)="EditVeg(rec)"
+          class="btn btn-sm btn-success"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>

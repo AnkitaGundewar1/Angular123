@@ -1,0 +1,24 @@
+
+<div class="veg-container">
+    <div class="col-md-6 mt-2">
+        <form [formGroup]="recipeGroup">
+            <a [routerLink]="['/veg']" class="btn btn-md btn-danger">Back</a> <br><br>
+            <div class="form-group">
+                <label for="recipe_Name"><b>Recipe Name</b></label>
+                <input type="text" placeholder="Enter Recipe Name" formControlName="recipe_Name" class="form-control" />
+                <div style="color: red;" *ngIf="recipeGroup.controls.recipe_Name.errors && recipeGroup.controls.recipe_Name.touched"> enter Recipe Name </div>
+            </div> <br>
+
+            <div class="form-group">
+                <label for="recipe_Price"><b>Recipe Price</b></label>
+                <input type="text" placeholder="Enter Recipe Price" formControlName="recipe_Price" class="form-control" />
+                <div style="color: red;" *ngIf="recipeGroup.controls.recipe_Price.errors && recipeGroup.controls.recipe_Price.touched"> enter Recipe Price </div>
+            </div>
+           
+            <br>
+            <div>
+                <input type="button" value="Add Recipe" (click)="postVegRecipe()" class="btn btn-sm btn-success"/>
+            </div>
+       </form>
+    </div>
+</div>

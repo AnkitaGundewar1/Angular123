@@ -1,0 +1,8 @@
+.container{
+    width: 178vh;
+    height: 75vh;
+    background-image: url("http://localhost:4200/assets/images/recipe1.jpg");  
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+}
+

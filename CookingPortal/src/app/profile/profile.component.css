@@ -1,0 +1,40 @@
+.profile{
+    width: 175vh;
+    height: 73vh;
+    background-image: url("http://localhost:4200/assets/images/profile1.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+}
+  
+  /* Apply styles to table header cells (th) */
+  .profile th {
+    background-color: pink;
+    border: 3px solid #ccc;
+    padding: 8px;
+  }
+  
+  /* Apply styles to table data cells (td) */
+  .profile td {
+    border: 3px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .container-fluid{
+    text-align: center;
+  }
+  
+  /* Add alternating row colors for better readability */
+  .profile tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Apply styles to the update button */
+  .profile .btn {
+    margin-top: 5px;
+  }
+  
+

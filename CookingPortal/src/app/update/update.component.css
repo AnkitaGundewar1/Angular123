@@ -1,0 +1,12 @@
+.update {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 15vh;
+    width: 175vh;
+    height: 85vh;
+    background-image: url("http://localhost:4200/assets/images/update.png");  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  

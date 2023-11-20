@@ -1,0 +1,29 @@
+<div class="center-container">
+    <div class="login-container" width="20" class="col-md-6">
+        <!-- <u><i> <h3>Login Page :</h3> </i></u> <br>  -->
+
+        <div class="wrapper two">
+            <div class="neon">
+                <h2> Login Page </h2>
+            </div>
+        </div> <br>
+
+        <form [formGroup]="loginGroup">
+        <div class="form-group">
+            <label><b>Email</b></label>
+            <input type="email"  placeholder="Enter Email" formControlName="email" class="form-control" />
+        <div style="color: red;" *ngIf="loginGroup.controls.email.errors && loginGroup.controls.email.touched"> enter Email ID </div>
+
+        </div>
+            <div class="form-group">
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" formControlName="password" class="form-control" />
+                <div style="color: red;" *ngIf="loginGroup.controls.password.errors && loginGroup.controls.password.touched"> enter Password </div>
+            </div> <br>
+            <input type="button" class="btn  btn-sm btn-success" value="Login" (click)="validate()" />  &nbsp;&nbsp;
+            <a [routerLink]="['/registration']" class="btn btn-sm btn-info">New Customer? Register Here</a> &nbsp;&nbsp;  
+        </form>
+    </div>
+</div> 
+
+

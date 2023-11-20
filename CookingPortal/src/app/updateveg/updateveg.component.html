@@ -1,0 +1,30 @@
+
+<div class="update">
+    <div class="col-md-6 mt-2">
+        <form [formGroup]="vegGroup">
+
+            <a [routerLink]="['/veg']" class="btn btn-md btn-danger">Back</a> <br><br>
+
+            <div class="form-group">
+                <label for="recipe_Id"><b>Recipe_Id</b></label>
+                <input type="text" formControlName="recipe_Id" [(ngModel)]="this.Data.recipe_Id" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="recipe_Name"><b>Recipe_Name</b></label>
+                <input type="text" formControlName="recipe_Name" [(ngModel)]="this.Data.recipe_Name" class="form-control" />
+            </div>
+            
+            <div class="form-group">
+                <label for="recipe_Price"><b>Recipe_Price</b></label>
+                <input type="text" formControlName="recipe_Price" [(ngModel)]="this.Data.recipe_Price" class="form-control" />
+            </div>
+
+            <div>
+                <br>
+            <input type="button" value="Update Profile" (click)="updateVeg()" class="btn btn-sm btn-primary" /> 
+
+            </div>
+        </form>
+    </div>
+</div>

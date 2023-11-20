@@ -1,0 +1,57 @@
+.nonveg{
+    width: 175vh;
+    height: 74vh;
+    background-image: url("http://localhost:4200/assets/images/profile1.png");  
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+}
+  
+  /* Apply styles to table header cells (th) */
+  .nonveg th {
+    background-color: pink;
+    border: 3px solid #ccc;
+    padding: 8px;
+  }
+  
+  /* Apply styles to table data cells (td) */
+  .nonveg td {
+    border: 3px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Add alternating row colors for better readability */
+  .nonveg tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Apply styles to the update button */
+  .nonveg .btn {
+    margin-top: 5px;
+  }
+  
+  .wrapper.two {
+    /* background-color: #44107a; */
+    font-size: 6rem;
+    font-family: "Play", sans-serif;
+}
+.neon h2 {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+
+

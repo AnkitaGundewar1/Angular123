@@ -1,0 +1,32 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 15vh;
+    width: 170vh;
+    height: 90vh;
+    background-image: url("http://localhost:4200/assets/images/background.jpg");  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .wrapper.two {
+    /* background-color: #44107a; */
+    font-size: 6rem;
+    font-family: "Play", sans-serif;
+}
+.neon h2 {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}

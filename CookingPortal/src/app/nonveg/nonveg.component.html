@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-light bg-info">
+    <div class="container-fluid">
+        <a [routerLink]="['/recipes']" class="btn btn-md btn-danger">Back</a> <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="wrapper two">
+            <div class="neon">
+                <h2> List of Non-Veg Recipes </h2>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <input type="button" value="Add Recipe" (click)="addRecipe()" class="btn btn-md btn-success"/> &nbsp;&nbsp;
+    </div>
+</nav>
+<br> <br>
+
+<table class="nonveg" border="5" >
+    <thead>
+        <tr>
+            <th scope="col">Recipe_Id</th>
+            <th scope="col">Recipe_Name</th>
+            <th scope="col">Recipe_Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+           <tr *ngFor="let non of nonVegList">
+            <td>{{non.recipe_Id}}</td>
+            <td>{{non.recipe_Name}}</td>
+            <td>{{non.recipe_Price}}</td>
+            <td> <input type="button" value="Delete" (click)="deleteRecipe(non.recipe_Id)" class="btn btn-md btn-danger"/> </td>
+            <td> <input type="button" value="Update" (click)="EditNonVeg(non)" class="btn btn-sm btn-success"/> </td>    
+          </tr>
+    </tbody>
+</table>
+

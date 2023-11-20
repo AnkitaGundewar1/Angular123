@@ -1,0 +1,56 @@
+
+<div class="container">
+    <div class="col-md-6 mt-2">
+        <form [formGroup]="userGroup">
+            <a [routerLink]="['/login']" class="btn btn-md btn-danger">Back</a> <br><br>
+            
+            <div class="form-group">
+                <label for="firstName"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" formControlName="firstName" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.firstName.errors && userGroup.controls.firstName.touched"> enter First Name </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" formControlName="lastName" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.lastName.errors && userGroup.controls.lastName.touched"> enter Last Name </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="mobile_No"><b>Mobile Number</b></label>
+                <input type="text" placeholder="Enter Mobile Number" formControlName="mobile_No" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.mobile_No.errors && userGroup.controls.mobile_No.touched"> Ten Digits Required </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><b>Email Id</b></label>
+                <input type="text" placeholder="Enter Email" formControlName="email" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.email.errors && userGroup.controls.email.touched"> enter Email Id </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password"><b>Password</b>></label>
+                <input type="text" placeholder="Enter Password" formControlName="password" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.password.errors && userGroup.controls.password.touched"> enter Password </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="city"><b>City</b></label>
+                <input type="text" placeholder="Enter City" formControlName="city" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.city.errors && userGroup.controls.city.touched"> enter City </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="age"><b>age</b></label>
+                <input type="text" placeholder="Enter Age" formControlName="age" class="form-control" />
+                <div style="color: red;" *ngIf="userGroup.controls.age.errors && userGroup.controls.city.touched"> enter Age <Address></Address> </div>
+            </div>
+            <br>
+            <div>
+                <input type="button" value="Register" (click)="postUser()" class="btn btn-sm btn-success"/>
+            </div>
+       </form>
+    </div>
+</div>
